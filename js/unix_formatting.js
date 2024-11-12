@@ -947,7 +947,7 @@
             cyan: '#0AA',
             white: '#AAA'
         },
-        faited: {
+        fainted: {
             black: '#000',
             red: '#640000',
             green: '#006100',
@@ -1060,12 +1060,12 @@
                         });
                         state.blink = false;
                         state.bold = false;
-                        state.faited = false;
+                        state.fainted = false;
                         break;
                     case 1:
                         styles.push('b');
                         state.bold = true;
-                        state.faited = false;
+                        state.fainted = false;
                         break;
                     case 4:
                         styles.push('u');
@@ -1090,7 +1090,7 @@
                         if (_ex_color || _ex_background) {
                             _process_true_color = 0;
                         } else {
-                            state.faited = true;
+                            state.fainted = true;
                             state.bold = false;
                         }
                         break;
@@ -1173,8 +1173,8 @@
             var colors, color, background;
             if (state.bold) {
                 colors = $.terminal.ansi_colors.bold;
-            } else if (state.faited) {
-                colors = $.terminal.ansi_colors.faited;
+            } else if (state.fainted) {
+                colors = $.terminal.ansi_colors.fainted;
             } else {
                 colors = $.terminal.ansi_colors.normal;
             }
